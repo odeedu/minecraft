@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>架空路線表</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 全体の余白を調整 */
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-top: 50px; /* 上部の余白を確保 */
+        }
+
+        .table-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* 上から配置 */
+            align-items: center;
+            gap: 20px;
+            padding-top: 20px; /* 上部に余白を追加 */
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.4em;
+        }
+
+        td {
+            background-color: #f9f9f9;
+        }
+
+        .station {
+            text-decoration: underline;
+            font-size: 1.3em;
+            color: #3e8e41;
+        }
+
+        td:hover {
+            background-color: #e1f5e1;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                width: 95%;
+            }
+
+            th, td {
+                font-size: 1em;
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>架空の路線表</h1>
+    <div class="table-container">
+        <div>
+            <h2>南北線</h2>
+            <table>
+                <tr><th>駅名</th><th>乗り換え</th></tr>
+                <tr><td class="station">ゴレトラ駅</td><td>なし</td></tr>
+                <tr><td class="station">露天掘り山駅</td><td>なし</td></tr>
+                <tr><td class="station">YakoCh1te駅</td><td>なし</td></tr>
+                <tr><td class="station">みんなの場所駅</td><td>東西線</td></tr>
+                <tr><td class="station">山越え駅</td><td>なし</td></tr>
+                <tr><td class="station">北山越え駅</td><td>なし</td></tr>
+            </table>
+        </div>
+        <div>
+            <h2>東西線</h2>
+            <table>
+                <tr><th>駅名</th><th>乗り換え</th></tr>
+                <tr><td class="station">入り江駅</td><td>なし</td></tr>
+                <tr><td class="station">sausage駅</td><td>なし</td></tr>
+                <tr><td class="station">初期リス駅</td><td>なし</td></tr>
+                <tr><td class="station">oiraedu駅</td><td>なし</td></tr>
+                <tr><td class="station">みんなの場所駅</td><td>南北線</td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

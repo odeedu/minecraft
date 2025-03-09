@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>十字座標</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        .axis {
+            position: absolute;
+            background-color: black;
+        }
+        .x-axis {
+            width: 600px;
+            height: 3px;
+        }
+        .y-axis {
+            width: 3px;
+            height: 600px;
+        }
+        .label {
+            position: absolute;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .point {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            border-radius: 50%;
+        }
+        .label-point {
+            position: absolute;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+        }
+        .axis-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        line {
+            stroke: #B02E26;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- x軸とy軸 -->
+    <div class="axis x-axis"></div>
+    <div class="axis y-axis"></div>
+
+    <!-- x軸のラベル (右方向 = x+ , 左方向 = x-) -->
+    <div class="label axis-label" style="left: calc(50% + 310px); top: calc(50% - 20px);">x+</div>
+    <div class="label axis-label" style="left: calc(50% - 340px); top: calc(50% - 20px);">x-</div>
+
+    <!-- y軸のラベル (上方向 = y+ , 下方向 = y-) -->
+    <div class="label axis-label" style="left: calc(50% - 20px); top: calc(50% - 310px);">y+</div>
+    <div class="label axis-label" style="left: calc(50% - 20px); top: calc(50% + 240px);">y-</div>
+
+    <!-- SVG線 -->
+    <svg width="800" height="800" viewBox="-400 -400 800 800">
+        <line x1="146" y1="-50" x2="-18" y2="-30" />
+        <line x1="-18" y1="-30" x2="-81" y2="-60" />
+        <line x1="-81" y1="-60" x2="-80" y2="-133" />
+        <line x1="-80" y1="-133" x2="-277" y2="-74" />
+        <line x1="-277" y1="-74" x2="-357" y2="-111" />
+        <line x1="-357" y1="-111" x2="211" y2="188" />
+        <line x1="211" y1="188" x2="212" y2="136" />
+        <line x1="212" y1="136" x2="149" y2="132" />
+        <line x1="149" y1="132" x2="146" y2="-50" />
+        <line x1="146" y1="-50" x2="268" y2="-93" />
+        <line x1="268" y1="-93" x2="431" y2="-218" />
+    </svg>
+    
+    <!-- 点とラベル -->
+    <div class="point" style="left: calc(50% + 211px - 5px); top: calc(50% - 188px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + 211px); top: calc(50% - 188px + 10px);">ゴレトラ</div>
+    
+    <div class="point" style="left: calc(50% + 212px - 5px); top: calc(50% - 136px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + 212px); top: calc(50% - 136px + 10px);">露天掘り山</div>
+    
+    <div class="point" style="left: calc(50% + 149px - 5px); top: calc(50% - 132px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + 149px); top: calc(50% - 132px + 10px);">YakoCh1te</div>
+    
+    <div class="point" style="left: calc(50% + 146px - 5px); top: calc(50% - 50px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + 146px); top: calc(50% - 50px + 10px);">みんなの場所</div>
+
+    <div class="point" style="left: calc(50% + 268px - 5px); top: calc(50% - 93px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + 268px); top: calc(50% - 93px + 10px);">山越え</div>
+    
+    <div class="point" style="left: calc(50% + 431px - 5px); top: calc(50% - 218px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + 431px); top: calc(50% - 218px + 10px);">北山越え</div>
+    
+    <!-- 新規点追加 -->
+    <div class="point" style="left: calc(50% + 146px - 5px); top: calc(50% - 50px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + 146px); top: calc(50% - 50px + 10px);">みんなの場所駅</div>
+
+    <div class="point" style="left: calc(50% + -18px - 5px); top: calc(50% - -30px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + -18px); top: calc(50% - -30px + 10px);">oiraedu</div>
+
+    <div class="point" style="left: calc(50% + -81px - 5px); top: calc(50% - -60px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + -81px); top: calc(50% - -60px + 10px);">初期リス</div>
+
+    <div class="point" style="left: calc(50% + -80px - 5px); top: calc(50% - -133px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + -80px); top: calc(50% - -133px + 10px);">sausage</div>
+
+    <div class="point" style="left: calc(50% + -277px - 5px); top: calc(50% - -74px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + -277px); top: calc(50% - -74px + 10px);">入り江</div>
+
+    <div class="point" style="left: calc(50% + -357px - 5px); top: calc(50% - -111px - 5px);"></div>
+    <div class="label-point" style="left: calc(50% + -357px); top: calc(50% - -111px + 10px);">闘技場</div>
+</body>
+</html>
